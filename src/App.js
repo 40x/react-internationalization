@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Switch, Route, NavLink } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 import './App.css';
+import routes from './Routes';
 
 class App extends Component {
-  render() {
+  render() {    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <ul>
+          {
+            routes.map(r => <li key={r.path}><NavLink 
+              to={r.path}
+              activeClassName="active">{
+              <FormattedMessage
+                id={ r.title }
+              />
+            }</NavLink></li>)
+          }
+        </ul>
+        
+        <Switch>
+          {
+            routes.map(r => <Route exact={r.exact} key={r.path} path={r.path} component={r.component} />)
+          }
+        </Switch>
       </div>
     );
   }

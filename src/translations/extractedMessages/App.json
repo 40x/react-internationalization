@@ -1,0 +1,34 @@
+[
+  {
+    "id": "app.navigation.home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "app.navigation.about",
+    "defaultMessage": "About"
+  },
+  {
+    "id": "app.navigation.settings",
+    "defaultMessage": "Settings"
+  },
+  {
+    "id": "about.title",
+    "defaultMessage": "About"
+  },
+  {
+    "id": "settings.title",
+    "defaultMessage": "Settings"
+  },
+  {
+    "id": "home.date",
+    "defaultMessage": "Sample Date:"
+  },
+  {
+    "id": "home.number",
+    "defaultMessage": "Sample Number:"
+  },
+  {
+    "id": "home.currency",
+    "defaultMessage": "Sample Currency:"
+  }
+]
